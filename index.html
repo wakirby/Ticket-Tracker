@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <form id="ticketForm">
+        <div class="r-flex">
+          <div class="formItem-50">
+           <input type="hidden"  name="id" id="id" disabled />
+          </div>
+          <div class="formItem-50">
+           <input type="text"  name="date" id= "date" disabled />
+          </div>
+        </div>
+        <div class="r-flex">
+          <div class="formItem-50">
+            <input type="text" id="contact" required />
+          <label for="name">Contact Name</label>
+          </div>
+              <div class="formItem-50">
+            <input type="text"  id="phone" required />
+            <label for="phone">Contact Number</label></div>
+          <a type="button" href="#">Copy</a>
+        </div>
+        <div>
+          <input type="text"  id="issue" required />
+          <label for="issue">Customer issue</label>
+        </div>
+        <div>
+          <input type="text" id="ticket" required />
+          <label for="ticket">Ticket Number</label>
+        </div>
+        <div>
+          <textarea type="text" id="details" required></textarea>
+          <label for="details">Details</label>
+        </div>
+        <div class="r-flex">
+        <button class="save">Add Ticket</button>
+        <button>Copy Clipboard</button>
+        <button>Purge Storage</button>
+        </div>
+      </form>
+      <!-- Section to layout tickets in a card based system -->
+      <div class="tickets">
+        <ul class="cards">
+          <!--
+            *******************************************************
+                            Generated Tickets
+            *******************************************************-->
+        </ul>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

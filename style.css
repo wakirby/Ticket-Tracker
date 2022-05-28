@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  width: 80%;
+  margin: 15px auto 0;
+}
+
+form{
+  /* background-color:bisque; */
+  padding-top: 40px;
+  width:400px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+
+}
+
+#ticketForm * {
+  padding: 2px;
+  font-size: 1.1rem;
+  /* border-radius: 10px; */
+  transition: all 0.3s ease;
+  
+}
+
+#ticketForm button {
+  outline: none;
+  background-color: #6495ed;
+  color: white;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+#ticketForm input {
+  padding:7px 0;
+  margin-bottom: 30px;
+}
+
+#ticketForm textarea{
+  padding:5px;
+  height:80px;
+  margin-bottom: 20px;
+
+}
+#ticketForm input,
+#ticketForm textarea{
+  width:100%;
+  box-shadow: none;
+  outline:none;
+  border:none;
+  border-bottom: 2px solid #999;
+}
+
+.formItem-50{
+  width:48%;
+}
+
+.r-flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+#ticketForm div {
+  position: relative;
+}
+
+#ticketForm div label{
+   position:absolute;
+   top:10px;
+   left:3px;
+   pointer-events: none;
+   color:#999;
+   transition: 0.5s;
+}
+
+#ticketForm input:focus ~ label,
+#ticketForm textarea:focus ~label
+{
+  top:-15px;
+  font-size: 14px;
+  font-weight: bold;
+  color:red;
+}
+
+#ticketForm input:valid ~ label,
+#ticketForm textarea:valid ~label{
+  top:-15px;
+  font-size: 14px;
+  font-weight: bold;
+  color:green;
+}
+
+#ticketForm input:focus {
+   border-bottom: 3px solid #367bfa; 
+}
+
+#ticketForm button:active {
+  border-color: #367bfa;
+}
+
+.tickets {
+  display:block;
+  border: none; /* 2px solid gray;*/
+  /* background-color: teal; */
+  border-radius: 15px;
+}
+
+/*Ticket Card  Layout */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+.card__title, .card__contact {
+  display:flex;
+  gap:5px;
+  justify-content: space-between;
+  color: #696969;
+  font-size: .6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__issue{
+  color: red;
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding:3px 0 0 0px;
+}
+.card__spacer{
+  width:100%;
+  margin-top:8px;
+  margin-bottom: 8px;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  padding:5px;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.card__footer{
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  padding:5px;
+}
+
+.card__footer button{
+padding:5px;
+border-radius: 10px;
+border:none;
+outline:none;
+cursor: pointer;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.truncate__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    width: 250px;
+    overflow: hidden;
+
+}
+
+#id, #date{
+  color:black;
+}
+
+.edit{
+  background-color: yellow;
+  color:blackl;
+}
+
+.delete{
+  background-color: red;
+  color: white;
+}
+
+
+
